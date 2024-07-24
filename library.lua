@@ -241,7 +241,7 @@ do
 					Name = "Pages",
 					BackgroundTransparency = 1,
 					ClipsDescendants = true,
-					Position = UDim2.new(0.65, -70, 0, 30),
+					Position = UDim2.new(0.65, -250, 0, 45),
 					Size = UDim2.new(0, 100, 1, -350),
 					ZIndex = 3,
 					Image = "rbxassetid://5012534273",
