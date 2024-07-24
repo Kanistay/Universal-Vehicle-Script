@@ -6,7 +6,7 @@ local mouse = player:GetMouse()
 local input = game:GetService("UserInputService")
 local run = game:GetService("RunService")
 local tween = game:GetService("TweenService")
-local tweeninfo = TweenInfo.ne
+local tweeninfo = TweenInfo.new
 
 -- additional
 local utility = {}
@@ -235,8 +235,34 @@ do
 					Image = "rbxassetid://5028857084",
 					ImageColor3 = themes.Glow,
 					ScaleType = Enum.ScaleType.Slice,
-					SliceCenter = Rect.new(24, 24, 276, 
+					SliceCenter = Rect.new(24, 24, 276, 276)
+				}),
+				utility:Create("ImageLabel", {
+					Name = "Pages",
+					BackgroundTransparency = 1,
+					ClipsDescendants = true,
+					Position = UDim2.new(0, 0, 0, 38),
+					Size = UDim2.new(0, 126, 1, -38),
+					ZIndex = 3,
+					Image = "rbxassetid://5012534273",
+					ImageColor3 = themes.DarkContrast,
+					ScaleType = Enum.ScaleType.Slice,
+					SliceCenter = Rect.new(4, 4, 296, 296)
+				}, {
+					utility:Create("ScrollingFrame", {
+						Name = "Pages_Container",
+						Active = true,
+						BackgroundTransparency = 1,
+						Position = UDim2.new(0, 0, 0, 10),
+						Size = UDim2.new(1, 0, 1, -20),
+						CanvasSize = UDim2.new(0, 0, 0, 314),
+						ScrollBarThickness = 0
 					}, {
+						utility:Create("UIListLayout", {
+							SortOrder = Enum.SortOrder.LayoutOrder,
+							Padding = UDim.new(0, 10)
+						})
+					})
 				}),
 				utility:Create("ImageLabel", {
 					Name = "TopBar",
