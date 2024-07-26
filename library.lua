@@ -11,7 +11,7 @@ local tweeninfo = TweenInfo.new
 -- additional
 local utility = {}
 
--- themes
+-- thmes
 local objects = {}
 local themes = {
 	Background = Color3.fromRGB(24, 24, 24), 
