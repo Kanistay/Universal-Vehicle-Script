@@ -1,5 +1,5 @@
-local VenyxLibrary = loadstring(game:HttpGet("https://raw.githubusercontent.com/Kanistay/Vehicle-Fly-Library/main/library.lua"))()
-local Venyx = VenyxLibrary.new("Kansty Vehicle Script Working For All Games", 5013109572)
+local VenyxLibrary = loadstring(game:HttpGet("https://raw.githubusercontent.com/Kanistay/Vehicle-Fly-Library/main/Library.lua"))()
+local Venyx = VenyxLibrary.new("Universal Vehicle Script", 5013109572)
 
 local Players = game:GetService("Players")
 local RunService = game:GetService("RunService")
@@ -187,7 +187,29 @@ elseif game.PlaceId == 54865335 then
 elseif game.PlaceId == 5232896677 then
 	local pacificoPage = Venyx:addPage("Pacifico", 3028235557)
 end
-
+local infoPage = Venyx:addPage("Information", 8356778308)
+local discordSection = infoPage:addSection("Discord")
+discordSection:addButton(syn and "Join the Discord server" or "Copy Discord Link", function()
+	if syn then
+		syn.request({
+			Url = "http://127.0.0.1:6463/rpc?v=1",
+			Method = "POST",
+			Headers = {
+				["Content-Type"] = "application/json",
+				["Origin"] = "https://discord.com"
+			},
+			Body = game:GetService("HttpService"):JSONEncode({
+				cmd = "INVITE_BROWSER",
+				args = {
+					code = "ENHYznSPmM"
+				},
+				nonce = game:GetService("HttpService"):GenerateGUID(false)
+			}),
+		})
+		return
+	end
+	setclipboard("https://www.discord.com/invite/ENHYznSPmM")
+end)
 
 
 local function CloseGUI()
