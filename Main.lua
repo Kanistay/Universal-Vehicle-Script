@@ -1,4 +1,4 @@
-local VenyxLibrary = loadstring(game:HttpGet("https://raw.githubusercontent.com/Kanistay/Vehicle-Fly-Library/main/library.lua"))()
+local VenyxLibrary = loadstring(game:HttpGet("https://raw.githubusercontent.com/Kanistay/Universal-Vehicle-Script/main/Library.lua"))()
 local Venyx = VenyxLibrary.new("Universal Vehicle Script", 5013109572)
 
 local Players = game:GetService("Players")
