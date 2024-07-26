@@ -192,7 +192,7 @@ local discordSection = infoPage:addSection("Discord")
 discordSection:addButton(syn and "Join the Discord server" or "Copy Discord Link", function()
 	if syn then
 		syn.request({
-			Url = "http://127.0.0.1:6463/rpc?v=1",
+			Url = "https://discord.gg/eEwBcYkq",
 			Method = "POST",
 			Headers = {
 				["Content-Type"] = "application/json",
@@ -201,14 +201,14 @@ discordSection:addButton(syn and "Join the Discord server" or "Copy Discord Link
 			Body = game:GetService("HttpService"):JSONEncode({
 				cmd = "INVITE_BROWSER",
 				args = {
-					code = "ENHYznSPmM"
+					code = "eEwBcYkq"
 				},
 				nonce = game:GetService("HttpService"):GenerateGUID(false)
 			}),
 		})
 		return
 	end
-	setclipboard("https://www.discord.com/invite/ENHYznSPmM")
+	setclipboard("https://www.discord.com/invite/eEwBcYkq")
 end)
 
 
